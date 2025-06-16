@@ -6,6 +6,7 @@
     <title>Consumo Sustentável de Energia e Produtos</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
@@ -75,21 +76,33 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="text-success">🔋 Consumo de Energia no Brasil</h5>
-                            <p>
-                                <strong>Residencial:</strong> 25% do total<br>
-                                <strong>Industrial:</strong> 35% do total<br>
-                                <strong>Comercial:</strong> 17% do total<br>
-                                <strong>Outros:</strong> 23% do total
+                            <canvas id="consumoSetorChart" width="300" height="300"></canvas>
+                            <p class="mt-3 mb-0 text-center">
+                                <strong>Residencial:</strong> 25%<br>
+                                <strong>Industrial:</strong> 35%<br>
+                                <strong>Comercial:</strong> 17%<br>
+                                <strong>Outros:</strong> 23%
                             </p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="text-success">♻️ Você sabia?</h5>
                             <ul>
                                 <li>O Brasil recicla apenas cerca de 4% do lixo produzido.</li>
                                 <li>O consumo médio de energia por residência aumentou 20% na última década.</li>
                                 <li>Produtos sustentáveis ajudam a reduzir o impacto ambiental e economizar recursos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-success">💡 Tecnologia e Inovação</h5>
+                            <ul>
+                                <li>Casas inteligentes otimizam o uso de energia com sensores e automação.</li>
+                                <li>Painéis solares residenciais permitem geração própria e economia na conta de luz.</li>
+                                <li>Lâmpadas LED e eletrodomésticos eficientes reduzem o consumo.</li>
+                                <li>Aplicativos ajudam a monitorar e controlar o gasto energético.</li>
                             </ul>
                         </div>
                     </div>
@@ -108,5 +121,32 @@
             </small>
         </div>
     </footer>
+    <script>
+        // Gráfico de pizza do consumo por setor
+        const ctx = document.getElementById('consumoSetorChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Residencial', 'Industrial', 'Comercial', 'Outros'],
+                datasets: [{
+                    data: [25, 35, 17, 23],
+                    backgroundColor: [
+                        '#4caf50',
+                        '#2196f3',
+                        '#ff9800',
+                        '#9e9e9e'
+                    ]
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
