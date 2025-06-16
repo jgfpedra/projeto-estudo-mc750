@@ -3,121 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maquete Ultra Realista - Energia & Clima</title>
-    <link rel="stylesheet" href="./css/style.css"
+    <title>Energia Limpa ODS 7 & 13 - Maquete Interativa</title>
+    <meta name="description" content="Maquete interativa sobre energia limpa e ação climática baseada nos ODS 7 e 13 da ONU">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1>🌱 Energia Limpa para um Futuro Sustentável</h1>
-        <p>🔍 Descubra como a energia renovável e ações climáticas podem transformar nosso planeta. Passe o mouse sobre os elementos e escaneie os QR Codes com seu celular!</p>
-    </header>
-    <div class="maquete-container">
-        <div class="sol"></div>
-        <div class="solo"></div>
-        <div class="elemento torre-energia" onclick="abrirLink('torre')">
-            <div class="torre-base">
-                <div class="torre-estrutura">
-                    <div class="torre-travessa travessa1"></div>
-                    <div class="torre-travessa travessa2"></div>
-                    <div class="torre-travessa travessa3"></div>
-                </div>
-                <div class="torre-topo">
-                    <div class="torre-antena"></div>
-                    <div class="torre-luz"></div>
-                </div>
-            </div>
-            <div class="cabo-container">
-                <div class="cabo cabo1">
-                    <div class="isolador"></div>
-                </div>
-                <div class="cabo cabo2">
-                    <div class="isolador"></div>
-                </div>
-                <div class="cabo cabo3">
-                    <div class="isolador"></div>
-                </div>
-            </div>
-            <div class="energia-aura"></div>
-            <div class="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://unfccc.int/&bgcolor=FFFFFF&color=000000&margin=10" 
-                     alt="QR Code UNFCCC" loading="lazy">
-                <div class="qr-label">🔌 UNFCCC - Convenção do Clima</div>
-                <div class="qr-instrucoes">📱 Escaneie com a câmera</div>
-            </div>
-        </div>
-        <div class="elemento casa casa1" onclick="abrirLink('casa1')">
-            <div class="casa-corpo">
-                <div class="casa-teto"></div>
-                <div class="painel-solar"></div>
-            </div>
-            <div class="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.irena.org/&bgcolor=FFFFFF&color=000000&margin=10" 
-                     alt="QR Code IRENA" loading="lazy">
-                <div class="qr-label">🏠 IRENA - Energia Renovável</div>
-                <div class="qr-instrucoes">📱 Escaneie com a câmera</div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">🌱 Projeto de MC750</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="fontesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fontes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="fontesDropdown">
+                            <li><a class="dropdown-item" href="./paginas/fontes.html">💧 Hidrelétrica</a></li>
+                            <li><a class="dropdown-item" href="./paginas/transmissao.html">🗼 Transmissão</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="tecnologiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Consumo
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tecnologiaDropdown">
+                            <li><a class="dropdown-item" href="./paginas/consumo.html">🏠 Consumo Sustentável </a></li>
+                            <li><a class="dropdown-item" href="./paginas/tecnologia.html">🚗 Carros Elétricos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="odsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ODS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="odsDropdown">
+                            <li><a class="dropdown-item" href="#ods">🎯 ODS 7</a></li>
+                            <li><a class="dropdown-item" href="#comparativos">🎯 ODS 13</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="elemento casa casa2" onclick="abrirLink('casa2')">
-            <div class="casa-corpo">
-                <div class="casa-teto"></div>
-                <div class="painel-solar"></div>
-            </div>
-            <div class="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.iea.org/&bgcolor=FFFFFF&color=000000&margin=10" 
-                     alt="QR Code IEA" loading="lazy">
-                <div class="qr-label">💡 IEA - Agência Internacional de Energia</div>
-                <div class="qr-instrucoes">📱 Escaneie com a câmera</div>
-            </div>
-        </div>
-        <div class="elemento carro-eletrico" onclick="abrirLink('carro')">
-            <div class="carro-chassi"></div>
-            <div class="carro-capot"></div>
-            <div class="carro-habitaculo"></div>
-            <div class="para-brisa"></div>
-            <div class="vidro-traseiro"></div>
-            <div class="carro-traseira"></div>
-            <div class="farol-dianteiro"></div>
-            <div class="farol-traseiro"></div>
-            <div class="carro-roda roda1">
-                <div class="roda-centro"></div>
-                <div class="roda-raios">
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
+    </nav>
+    <section id="ods" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">🎯 Objetivos de Desenvolvimento Sustentável</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <span class="ods-badge ods-7">ODS 7</span>
+                            </div>
+                            <h4 class="text-success">⚡ Energia Limpa e Acessível</h4>
+                            <h6>🎯 Metas principais:</h6>
+                            <ul>
+                                <li>Acesso universal à energia até 2030</li>
+                                <li>Aumentar a participação de energias renováveis</li>
+                                <li>Dobrar a eficiência energética global</li>
+                                <li>Facilitar acesso a tecnologias limpas</li>
+                            </ul>
+                            <h6>🇧🇷 Situação do Brasil:</h6>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">99.8%</div>
+                                    <p>População com acesso à eletricidade</p>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">83%</div>
+                                    <p>Matriz elétrica renovável</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <span class="ods-badge ods-13">ODS 13</span>
+                            </div>
+                            <h4 class="text-success">🌍 Ação Contra Mudança do Clima</h4>
+                            <h6>🎯 Metas principais:</h6>
+                            <ul>
+                                <li>Fortalecer resiliência climática</li>
+                                <li>Integrar mudanças climáticas nas políticas</li>
+                                <li>Melhorar educação sobre clima</li>
+                                <li>Cumprir compromissos de financiamento</li>
+                            </ul>
+                            <h6>🇧🇷 Compromissos do Brasil:</h6>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">50%</div>
+                                    <p>Redução de emissões até 2030</p>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">2050</div>
+                                    <p>Meta de neutralidade climática</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="carro-roda roda2">
-                <div class="roda-centro"></div>
-                <div class="roda-raios">
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
-                    <div class="raio"></div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="text-success">🚀 Como nosso projeto contribui:</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><strong>Educação:</strong> Conscientização sobre energia limpa</li>
+                                        <li><strong>Tecnologia:</strong> QR codes conectam física e digital</li>
+                                        <li><strong>Acessibilidade:</strong> Informação disponível para todos</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><strong>Sustentabilidade:</strong> Promove energias renováveis</li>
+                                        <li><strong>Inovação:</strong> Maquete interativa moderna</li>
+                                        <li><strong>Multiplicação:</strong> Conhecimento compartilhável</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="porta porta1"></div>
-            <div class="porta porta2"></div>
-            <div class="macaneta macaneta1"></div>
-            <div class="macaneta macaneta2"></div>
-            <div class="espelho espelho1"></div>
-            <div class="espelho espelho2"></div>
-            <div class="placa">
-                <div class="placa-texto">ECO2025</div>
-            </div>
-            <div class="simbolo-eletrico">⚡</div>
-            <div class="qr-code">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://www.ipcc.ch/&bgcolor=FFFFFF&color=000000&margin=10" 
-                     alt="QR Code IPCC" loading="lazy">
-                <div class="qr-label">🌍 IPCC - Painel do Clima</div>
-                <div class="qr-instrucoes">📱 Escaneie com a câmera</div>
+        </div>
+    </section>
+    <section id="comparativos" class="section">
+        <div class="container">
+            <h2 class="section-title">📊 Dados Comparativos</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-success">🇧🇷 Matriz Energética Brasileira</h5>
+                            <div class="chart-container">
+                                <div>
+                                    <strong>Distribuição das Fontes:</strong><br>
+                                    Hidrelétrica: 65% | Eólica: 8.7% | Gás Natural: 9.2%<br>
+                                    Biomassa: 7.8% | Petróleo: 4.3% | Solar: 2.5% | Outros: 2.5%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-success">🚗 Emissões CO₂ por Transporte</h5>
+                            <div class="chart-container">
+                                <div>
+                                    <strong>Emissões (g CO₂/km):</strong><br>
+                                    Carro Elétrico: 55 | Ônibus: 80<br>
+                                    Moto: 120 | Carro Flex: 150 | Avião: 250
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-success">⚡ Consumo de Energia por Setor</h5>
+                            <div class="chart-container">
+                                <div>
+                                    <strong>Distribuição do Consumo:</strong><br>
+                                    Industrial: 35% | Residencial: 25%<br>
+                                    Outros: 23% | Comercial: 17%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-success">📈 Evolução das Renováveis</h5>
+                            <div class="chart-container">
+                                <div>
+                                    <strong>Participação de Renováveis (%):</strong><br>
+                                    Brasil 2024: 83.2% | Mundo 2024: 31.2%<br>
+                                    Crescimento Brasil: 79% (2018) → 83.2% (2024)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="text-success">📈 Estatísticas Importantes</h5>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-number">83%</div>
+                                        <p>Energia renovável no Brasil</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-number">31%</div>
+                                        <p>Energia renovável mundial</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-number">65%</div>
+                                        <p>Hidrelétricas no Brasil</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-card">
+                                        <div class="stat-number">94k</div>
+                                        <p>Carros elétricos no Brasil (2023)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="./script/index.js"></script>
+    </section>
+    <footer class="bg-success text-white text-center py-3 mt-2">
+        <div class="container">
+            <small>
+                &copy; 2025 Energia Limpa ODS 7 & 13 | Projeto Interativo Unicamp
+            </small>
+        </div>
+    </footer>
 </body>
 </html>

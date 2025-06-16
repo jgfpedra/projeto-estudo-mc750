@@ -1,4 +1,9 @@
+// Detectar dispositivo móvel
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
+// Função para abrir links - CORRIGIDA
 function abrirLink(elemento) {
     const urls = {
         torre: 'https://unfccc.int/',
@@ -19,12 +24,27 @@ function abrirLink(elemento) {
     }, 200);
 }
 
+// Navegação suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offsetTop = target.offsetTop - 80; // Compensar navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
 // Detectar dispositivo móvel
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
-// Se for mobile, mostrar QR codes sempre visíveis
+// Mostrar QR codes sempre visíveis no mobile
 if (isMobile()) {
     document.querySelectorAll('.qr-code').forEach(qr => {
         qr.style.opacity = '1';
@@ -32,9 +52,7 @@ if (isMobile()) {
     });
 }
 
-// Animação de entrada
-window.addEventListener('load', () => {
-    document.querySelectorAll('.elemento').forEach((el, index) => {
+            // Animação de entrada dos elementos
+document.querySelectorAll('.elemento').forEach((el, index) => {
         el.style.animationDelay = `${index * 0.5}s`;
-    });
 });
