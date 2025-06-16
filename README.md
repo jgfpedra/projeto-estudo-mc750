@@ -3,7 +3,7 @@
 ## Nomes
 
 - 248349 - Joao Guilherme Ferreira Pedra
-
+- 260594 - Luís Felipe Rodrigues Dutra
 ## 🎯 Objetivo
 
 Criar uma maquete interativa com QR Codes que levam a um site informativo sobre energias limpas e mudanças climáticas, de acordo com os Objetivos de Desenvolvimento Sustentável da ONU (ODS 7 e 13).
