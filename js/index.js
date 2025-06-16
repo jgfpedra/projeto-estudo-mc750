@@ -56,3 +56,28 @@ if (isMobile()) {
 document.querySelectorAll('.elemento').forEach((el, index) => {
         el.style.animationDelay = `${index * 0.5}s`;
 });
+
+const ctx = document.getElementById('consumoSetorChart').getContext('2d');
+new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Residencial', 'Industrial', 'Comercial', 'Outros'],
+        datasets: [{
+            data: [25, 35, 17, 23],
+            backgroundColor: [
+                '#4caf50',
+                '#2196f3',
+                '#ff9800',
+                '#9e9e9e'
+            ]
+        }]
+    },
+    options: {
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom'
+            }
+        }
+    }
+});

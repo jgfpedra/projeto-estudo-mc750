@@ -121,32 +121,6 @@
             </small>
         </div>
     </footer>
-    <script>
-        // Gráfico de pizza do consumo por setor
-        const ctx = document.getElementById('consumoSetorChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Residencial', 'Industrial', 'Comercial', 'Outros'],
-                datasets: [{
-                    data: [25, 35, 17, 23],
-                    backgroundColor: [
-                        '#4caf50',
-                        '#2196f3',
-                        '#ff9800',
-                        '#9e9e9e'
-                    ]
-                }]
-            },
-            options: {
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom'
-                    }
-                }
-            }
-        });
-    </script>
+    <script src="../../js/index.js"></script>
 </body>
 </html>

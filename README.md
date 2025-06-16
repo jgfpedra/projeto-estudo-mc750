@@ -1,116 +1,108 @@
 # 🌱 Projeto Maquete Interativa - ODS 7 e 13 (ONU)
 
+[🔗 Acesse o site aqui](https://jgfpedra.github.io/projeto-estudo-mc750/)
+
 ## Nomes
 
 - 248349 - Joao Guilherme Ferreira Pedra
 - 260594 - Luís Felipe Rodrigues Dutra
 - 260431 - Felipe Leme de Argollo Ferrão
+---
 
 ## 🎯 Objetivo
 
-Criar uma maquete interativa com QR Codes que levam a um site informativo sobre energias limpas e mudanças climáticas, de acordo com os Objetivos de Desenvolvimento Sustentável da ONU (ODS 7 e 13).
+Criar uma maquete interativa com QR Codes que levam a um site informativo sobre energias limpas, consumo consciente, tecnologias sustentáveis e mudanças climáticas, de acordo com os Objetivos de Desenvolvimento Sustentável da ONU (ODS 7 e 13).
 
 ---
 
 ## 🌐 Estrutura do Site
 
-O site servirá como apoio à maquete física. Cada parte da maquete terá um QR Code que leva para uma seção específica do site.
+O site serve como apoio à maquete física. Cada parte da maquete possui um QR Code que direciona para uma página específica do site.
 
-### 📌 1. Página Inicial (Home)
+### 📌 Página Inicial (Home)
 - Nome do projeto
 - Introdução às ODS 7 (Energia Limpa e Acessível) e 13 (Ação Climática)
+- Situação do Brasil e metas
 - Instruções sobre como usar os QR Codes
 
 ---
 
-### ⚡ 2. Hidrelétrica (Geração de Energia Limpa)
-- O que é e como funciona
+### 💧 Fontes de Energia (Hidrelétrica)
+- O que são e como funcionam as hidrelétricas
 - Prós e contras ambientais
 - Comparativo com outras fontes: solar, eólica, fóssil
 - Dados do Brasil: participação na matriz energética
 
 ---
 
-### 🔌 3. Torres de Transmissão
+### 🗼 Transmissão de Energia
+- Como a energia chega até as casas
 - Explicação do transporte de energia
 - Perdas energéticas e novas tecnologias
 - Ligação com a ODS 7
 
 ---
 
-### 🏠 4. Casas - Consumo de Energia
+### 🏠 Consumo de Energia
 - Impacto do consumo doméstico
 - Dicas de economia de energia
+- Gráfico de consumo por setor
 - Comparativo Brasil x Mundo
 
 ---
 
-### ⛽ 5. Postos e Carros Elétricos
-- O que são e como funcionam
+### 🚗 Tecnologias Sustentáveis e Carros Elétricos
+- O que são e como funcionam os carros elétricos
 - Comparação com veículos a combustão
 - Emissão de gases e energia usada
 - Infraestrutura no Brasil
+- Outras tecnologias sustentáveis
 
 ---
 
-### 🌍 6. ODS 7 e 13 - Explicações
-- Descrição clara das metas
-- Como o projeto ajuda a atingir esses objetivos
-- Situação atual do Brasil
+### 🌐 ONU e ODS
+- O que é a ONU
+- O que são os ODS
+- Por que escolher os ODS 7 e 13
+- Importância de unir sustentabilidade e tecnologia
 
 ---
 
-### 📊 7. Comparativos Visuais
-- Gráficos e infográficos sobre:
-  - Emissão de CO₂ por tipo de energia e transporte
-  - Evolução da matriz energética no Brasil e no mundo
-  - Consumo por setor
+### 📱 QR Codes
+- Página com todos os QR Codes das seções para uso na maquete
 
 ---
 
-### 📱 8. QR Code - Páginas Individuais
-Cada parte da maquete terá seu próprio QR Code direcionando para:
-
-- `/hidreletrica`
-- `/torres`
-- `/casa`
-- `/posto`
-- `/carro-eletrico`
-
-Cada página/seção inclui:
-- Explicações simples
-- Imagens ou vídeos
-- Dados comparativos
-- Referências
-
----
-
-## 🛠️ Tecnologias Sugeridas
+## 🛠️ Tecnologias Utilizadas
 
 - HTML + CSS + JS
 - [Bootstrap](https://getbootstrap.com/) (layout responsivo)
 - [Chart.js](https://www.chartjs.org/) (gráficos)
-- Gerador de QR Code online ou via JS
-- Hospedagem gratuita: GitHub Pages, Netlify, ou Vercel
+- Gerador de QR Code online
+- Hospedagem gratuita: GitHub Pages
 
 ---
 
-## 🎨 Dicas de Design
+## 🎨 Design
 
-- Cores: verde, azul e branco (ligadas à sustentabilidade)
+- Cores: verde, azul e branco (sustentabilidade)
 - Ícones oficiais da ONU (ODS)
 - Layout acessível e mobile-friendly
-- Menu com rolagem suave
+- Menu fixo com rolagem suave
 
 ---
 
-## ✅ Próximos Passos
+## ✅ Status
 
-- Criar estrutura inicial do site (HTML/CSS)
-- Definir conteúdo de cada seção
-- Gerar QR Codes personalizados
-- Criar gráficos comparativos
+- Estrutura do site pronta
+- Conteúdo de cada seção criado
+- QR Codes gerados e integrados
+- Gráficos comparativos implementados
 
 ---
 
-### 💬 Precisa de ajuda para começar o código? Posso montar o esqueleto HTML com as seções já criadas. Basta pedir! 😄
+## 📚 Referências
+
+- EPE, ANEEL, IEA, ONU Brasil, BBC Brasil, ABVE, CEMIG, IPEA
+
+---
