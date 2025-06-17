@@ -7,6 +7,7 @@
 - 248349 - Joao Guilherme Ferreira Pedra
 - 260594 - Luís Felipe Rodrigues Dutra
 - 260431 - Felipe Leme de Argollo Ferrão
+- 167109 - Barbara Vilma de Melo do Nascimento
 ---
 
 ## 🎯 Objetivo
