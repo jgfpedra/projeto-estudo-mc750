@@ -51,7 +51,7 @@
             </div>
         </div>
     </nav>
-    <section id="ods" class="section bg-light">
+    <section id="ods" class="section bg-light fadein">
         <div class="container">
             <h2 class="section-title">🎯 Objetivos de Desenvolvimento Sustentável</h2>
             <div class="row">
@@ -139,7 +139,7 @@
             </div>
         </div>
     </section>
-    <section id="comparativos" class="section">
+    <section id="comparativos" class="section fadein">
         <div class="container">
             <h2 class="section-title">📊 Dados Comparativos</h2>
             <div class="row">
@@ -235,6 +235,61 @@
             </div>
         </div>
     </section>
+    <!-- Seção de Curiosidades -->
+    <section id="curiosidades-section" class="section fadein">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body" id="curiosidades-section-inner"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Quiz -->
+    <section id="quiz-section" class="section fadein">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body" id="quiz-section-inner"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Leitura Complementar -->
+    <section id="leitura-section" class="section fadein">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body" id="leitura-section-inner"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Linha do Tempo Interativa -->
+    <section id="linha-tempo-section" class="section fadein">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h4 class="mb-4 text-success">Linha do Tempo das Energias Renováveis</h4>
+            <div id="timeline"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Compartilhamento -->
+    <section id="share-section" class="section fadein">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body" id="share-section-inner"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Seção de Feedback -->
+    <section id="feedback-section" class="section fadein">
+      <div class="container">
+        <div class="card mb-4">
+          <div class="card-body" id="feedback-section-inner"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Botão de acessibilidade -->
+    <button id="accessibility-btn" class="btn btn-secondary" title="Acessibilidade" style="position:fixed;bottom:30px;left:30px;z-index:9999;">
+      <span aria-hidden="true">🦾</span> Acessibilidade
+    </button>
     <footer class="bg-success text-white text-center py-3 mt-2">
         <div class="container">
             <small>
@@ -242,5 +297,9 @@
             </small>
         </div>
     </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/extras.js"></script>
+    <script src="./js/timeline.js"></script>
+    <script src="./js/mapa.js"></script>
 </body>
 </html>
